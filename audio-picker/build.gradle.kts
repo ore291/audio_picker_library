@@ -1,3 +1,6 @@
+import org.gradle.api.publish.maven.MavenPublication
+import org.gradle.api.publish.PublishingExtension
+
 plugins {
     alias(libs.plugins.android.library)
     id("maven-publish")
@@ -33,14 +36,14 @@ android {
     }
 
     publishing {
-        singleVariant("release")
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
     }
-
-
 }
 
 dependencies {
-
     implementation(libs.core)
     implementation(libs.recyclerview)
     implementation(libs.constraintlayout)
@@ -56,9 +59,18 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(libs.media)
-
-
-
 }
 
+afterEvaluate {
+    configure<PublishingExtension> {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
 
+                groupId = "com.github.ore291"
+                artifactId = "audio-picker"
+                version = "1.0.0"
+            }
+        }
+    }
+}
