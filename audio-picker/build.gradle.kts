@@ -69,7 +69,7 @@ afterEvaluate {
 
                 groupId = "com.github.ore291"
                 artifactId = "audio-picker"
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
