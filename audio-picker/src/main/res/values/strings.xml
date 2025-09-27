@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_reason">This app needs access to your audio files to let you select and process audio.</string>
+    <string name="access_your_audio_files">Access Your Audio Files</string>
+    <string name="your_privacy_is_protected_files_are_accessed_only_when_you_select_them">Your privacy is protected. Files are accessed only when you select them.</string>
+    <string name="don_t_allow">Don\'t Allow</string>
+    <string name="allow">Allow</string>
+    <string name="select_audio">Select Audio</string>
+</resources>
