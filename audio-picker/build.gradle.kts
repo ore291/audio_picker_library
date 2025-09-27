@@ -70,6 +70,26 @@ afterEvaluate {
                 groupId = "com.github.ore291"
                 artifactId = "audio-picker"
                 version = "1.0.1"
+
+                pom {
+                    name.set("Audio Picker")
+                    description.set("Android library for audio file picking")
+                    url.set("https://github.com/ore291/audio-picker")
+
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set("https://opensource.org/licenses/MIT")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.set("ore291")
+                            name.set("Oreoluwa")
+                        }
+                    }
+                }
             }
         }
     }
