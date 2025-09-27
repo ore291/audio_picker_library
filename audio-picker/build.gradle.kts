@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
 
 android {
@@ -30,6 +31,12 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    publishing {
+        singleVariant("release")
+    }
+
+
 }
 
 dependencies {
@@ -50,5 +57,8 @@ dependencies {
 
     implementation(libs.media)
 
+
+
 }
+
 
